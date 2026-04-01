@@ -1,0 +1,75 @@
+Para distinguir entre los comandos de Azure CLI y Azure PowerShell en Azure, hay varias diferencias claras en sintaxis, estilo y entorno:
+
+🟦 1. Prefijo de comandos
+
+Azure CLI
+Usa el comando base:
+
+az
+
+Ejemplo:
+
+az vm list
+
+Azure PowerShell
+Usa cmdlets con formato Verbo-Sustantivo:
+
+Get-AzVM
+🟩 2. Estilo de nombres
+Azure CLI → estilo tipo Linux / bash
+Minúsculas
+Separado por espacios
+
+Ejemplo:
+
+az group create --name MiGrupo --location eastus
+Azure PowerShell → estilo PowerShell clásico
+PascalCase
+Verbos como Get, New, Set, Remove
+
+Ejemplo:
+
+New-AzResourceGroup -Name MiGrupo -Location EastUS
+🟨 3. Parámetros
+
+Azure CLI
+Usa -- antes de los parámetros:
+
+--name
+--location
+
+Azure PowerShell
+Usa -:
+
+-Name
+-Location
+🟧 4. Tipo de salida
+Azure CLI
+Devuelve JSON por defecto
+Ideal para scripts y automatización
+Azure PowerShell
+Devuelve objetos .NET
+Puedes manipularlos directamente en PowerShell
+🟥 5. Ejemplo comparativo
+
+Crear un grupo de recursos:
+
+Azure CLI
+
+az group create --name MiGrupo --location eastus
+
+Azure PowerShell
+
+New-AzResourceGroup -Name MiGrupo -Location EastUS
+🟪 6. Cuándo usar cada uno
+Usa Azure CLI si:
+Trabajas en Linux/macOS
+Prefieres scripts tipo bash
+Usas herramientas multiplataforma
+Usa Azure PowerShell si:
+Ya trabajas con PowerShell
+Necesitas manipular objetos complejos
+Automatizas en entornos Windows
+🧠 Regla rápida para distinguirlos
+Si ves az → es Azure CLI
+Si ves Get-, New-, Set- → es Azure PowerShell
