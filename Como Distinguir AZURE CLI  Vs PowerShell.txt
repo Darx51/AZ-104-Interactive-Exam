@@ -73,3 +73,359 @@ Automatizas en entornos Windows
 🧠 Regla rápida para distinguirlos
 Si ves az → es Azure CLI
 Si ves Get-, New-, Set- → es Azure PowerShell
+
+
+COMANDOS MÁS IMPORTANTES PARA AZ-104 (2026)
+🟦 1. Autenticación y contexto (MUY preguntado)
+Azure CLI
+az login
+az account show
+az account set --subscription <id>
+PowerShell
+Connect-AzAccount
+Get-AzSubscription
+Set-AzContext
+
+👉 Este tema es clave: primero conectarte antes de ejecutar comandos
+
+🟩 2. Resource Groups (BÁSICO DEL EXAMEN)
+Azure CLI
+az group create
+az group list
+az group delete
+PowerShell
+New-AzResourceGroup
+Get-AzResourceGroup
+Remove-AzResourceGroup
+🟨 3. Máquinas Virtuales (MUY IMPORTANTE)
+Azure CLI
+az vm create
+az vm show
+az vm deallocate
+az vm start
+PowerShell
+New-AzVM
+Get-AzVM
+Stop-AzVM
+Start-AzVM
+
+👉 Ejemplo clásico de examen:
+
+New-AzVM = crear VM
+az vm create = equivalente
+🟧 4. Storage Accounts
+Azure CLI
+az storage account create
+az storage account delete
+az storage account list
+PowerShell
+New-AzStorageAccount
+Get-AzStorageAccount
+Remove-AzStorageAccount
+🟥 5. Redes (Networking)
+Azure CLI
+az network vnet create
+az network nsg create
+az network public-ip create
+PowerShell
+New-AzVirtualNetwork
+New-AzNetworkSecurityGroup
+New-AzPublicIpAddress
+🟪 6. Usuarios y roles (RBAC)
+Azure CLI
+az role assignment create
+az role assignment list
+PowerShell
+New-AzRoleAssignment
+Get-AzRoleAssignment
+
+👉 Muy preguntado: permisos (Reader, Contributor, Owner)
+
+🟫 7. Azure AD (identidades)
+PowerShell (más común en examen)
+Get-AzADUser
+New-AzADUser
+Remove-AzADUser
+Get-AzADGroup
+⚫ 8. Recursos en general
+Azure CLI
+az resource list
+az resource show
+PowerShell
+Get-AzResource
+🔵 9. Key Vault
+Azure CLI
+az keyvault create
+az keyvault secret set
+PowerShell
+New-AzKeyVault
+Set-AzKeyVaultSecret
+🟢 10. Web Apps (App Services)
+Azure CLI
+az webapp create
+PowerShell
+New-AzWebApp
+🚨 LO MÁS IMPORTANTE PARA EL EXAMEN
+
+No te van a pedir memorizar TODO, pero sí:
+
+✔ Reconocer comandos
+Saber cuál comando hace qué
+Diferenciar CLI vs PowerShell
+✔ Preguntas típicas:
+“¿Qué comando usarías para crear una VM?”
+“¿Cuál comando necesitas ejecutar primero?” → Connect-AzAccount
+“¿Cuál es el equivalente en CLI de X?”
+🎯 TIP PRO (MUY IMPORTANTE)
+
+Microsoft evalúa más esto:
+
+Concepto + comando correcto
+No tanto sintaxis exacta
+
+👉 Ejemplo real:
+
+Te dan:
+
+New-AzVM
+
+Pregunta: ¿qué hace? → Crear máquina virtual
+
+🧠 RESUMEN RÁPIDO
+Tipo	Azure CLI	PowerShell
+Login	az login	Connect-AzAccount
+RG	az group create	New-AzResourceGroup
+VM	az vm create	New-AzVM
+Storage	az storage account create	New-AzStorageAccount
+Roles	az role assignment create	New-AzRoleAssignment
+
+
+📝 SIMULADOR AZ-104 (ESTILO REAL)
+❓ Pregunta 1
+
+Necesitas ejecutar comandos en Azure PowerShell. ¿Cuál es el PRIMER comando que debes ejecutar?
+
+A) Get-AzVM
+B) Login-AzAccount
+C) Connect-AzAccount
+D) Set-AzContext
+
+✅ Respuesta correcta: C) Connect-AzAccount
+
+👉 Siempre debes autenticarte primero.
+
+❓ Pregunta 2
+
+Quieres crear un Resource Group usando Azure CLI. ¿Qué comando es correcto?
+
+A) az resource create
+B) az group create
+C) New-AzResourceGroup
+D) az new group
+
+✅ Respuesta: B) az group create
+
+❓ Pregunta 3
+
+¿Cuál comando de PowerShell crea una máquina virtual?
+
+A) Create-AzVM
+B) New-AzVM
+C) Set-AzVM
+D) Add-AzVM
+
+✅ Respuesta: B) New-AzVM
+
+❓ Pregunta 4
+
+Necesitas asignar el rol Contributor a un usuario. ¿Qué comando CLI usarías?
+
+A) az role create
+B) az role assignment create
+C) az assign role
+D) az user role add
+
+✅ Respuesta: B) az role assignment create
+
+❓ Pregunta 5
+
+¿Qué comando muestra todas las máquinas virtuales en PowerShell?
+
+A) List-AzVM
+B) Get-AzVM
+C) Show-AzVM
+D) Fetch-AzVM
+
+✅ Respuesta: B) Get-AzVM
+
+❓ Pregunta 6 (muy típica)
+
+¿Qué formato usa Azure CLI?
+
+A) Verb-Noun
+B) JSON objects
+C) Comandos tipo bash con az
+D) XML
+
+✅ Respuesta: C
+
+❓ Pregunta 7
+
+¿Qué servicio usarías para almacenar secretos?
+
+A) Storage Account
+B) Azure VM
+C) Key Vault
+D) App Service
+
+✅ Respuesta: C (Azure Key Vault)
+
+❓ Pregunta 8
+
+¿Qué comando cambia de suscripción en CLI?
+
+A) az account change
+B) az subscription set
+C) az account set
+D) az set subscription
+
+✅ Respuesta: C
+
+⚡ 🧠 FLASHCARDS (MEMORIZACIÓN RÁPIDA)
+
+Úsalas como si fueran tarjetas:
+
+🟦 Flashcard 1
+
+Q: Login en CLI
+A: az login
+
+🟩 Flashcard 2
+
+Q: Login en PowerShell
+A: Connect-AzAccount
+
+🟨 Flashcard 3
+
+Q: Crear VM (PowerShell)
+A: New-AzVM
+
+🟧 Flashcard 4
+
+Q: Crear VM (CLI)
+A: az vm create
+
+🟥 Flashcard 5
+
+Q: Crear Resource Group CLI
+A: az group create
+
+🟪 Flashcard 6
+
+Q: Crear Resource Group PowerShell
+A: New-AzResourceGroup
+
+⚫ Flashcard 7
+
+Q: Listar recursos PowerShell
+A: Get-AzResource
+
+🔵 Flashcard 8
+
+Q: RBAC CLI
+A: az role assignment create
+
+🟢 Flashcard 9
+
+Q: Key Vault secreto CLI
+A: az keyvault secret set
+
+🟫 Flashcard 10
+
+Q: Ver VMs PowerShell
+A: Get-AzVM
+
+🚀 PLAN REAL PARA APROBAR EN 2 SEMANAS
+📅 Día 1–3: Fundamentos
+Resource Groups
+Azure CLI vs PowerShell
+RBAC (MUY IMPORTANTE)
+
+👉 Aquí salen MUCHAS preguntas
+
+📅 Día 4–6: Compute (CRÍTICO)
+Máquinas virtuales
+Escalado
+Discos
+
+👉 Tema más pesado del examen
+
+📅 Día 7–9: Networking
+VNet
+NSG
+IP pública/privada
+
+👉 Aparecen escenarios prácticos
+
+📅 Día 10–11: Storage
+Storage Accounts
+Blob / File
+Replicación
+📅 Día 12–13: Identity + Governance
+Azure AD
+Roles
+Policies
+📅 Día 14: Simulacros
+Haz 2–3 exámenes completos
+Revisa errores (esto es CLAVE)
+🔥 TRUCOS REALES (ESTO MARCA LA DIFERENCIA)
+🧠 1. Regla de oro del examen
+
+👉 Si ves:
+
+az → CLI
+New-, Get- → PowerShell
+⚠️ 2. Pregunta trampa común
+
+Te ponen comandos inventados:
+
+❌ Create-AzVM
+❌ az vm new
+
+👉 NO existen → descártalos
+
+🎯 3. Prioriza esto (80% del examen)
+VMs
+Networking
+RBAC
+Storage
+🧩 4. No memorices todo
+
+👉 Enfócate en:
+
+Qué hace el comando
+No cada parámetro
+🧪 5. Practica mentalmente
+
+Ejemplo:
+“Necesito crear VM”
+→ New-AzVM o az vm create
+
+⚡ 6. Estrategia en el examen
+Primero responde lo fácil
+Marca las dudosas
+Regresa después
+✅ REALIDAD DEL EXAMEN AZ-104
+
+✔ No es solo teoría
+✔ Tiene escenarios
+✔ Mezcla CLI + PowerShell
+✔ Evalúa decisiones, no memoria pura
+
+🎯 SI QUIERES SUBIR DE NIVEL
+
+Puedo darte:
+
+✅ Simulador de 50 preguntas tipo examen real
+✅ Casos prácticos (como los labs del examen)
+✅ Cheatsheet de última hora (1 página)
