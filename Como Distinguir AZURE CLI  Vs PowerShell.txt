@@ -422,10 +422,274 @@ Regresa después
 ✔ Mezcla CLI + PowerShell
 ✔ Evalúa decisiones, no memoria pura
 
-🎯 SI QUIERES SUBIR DE NIVEL
+Necesitas dar acceso a un usuario SOLO para leer recursos en un Resource Group.
 
-Puedo darte:
+¿Qué rol asignas?
 
-✅ Simulador de 50 preguntas tipo examen real
-✅ Casos prácticos (como los labs del examen)
-✅ Cheatsheet de última hora (1 página)
+A) Owner
+B) Contributor
+C) Reader
+D) User Access Administrator
+
+✅ Respuesta: C (Reader)
+
+❓ 2
+
+¿Qué comando PowerShell asigna un rol?
+
+A) Set-AzRole
+B) New-AzRoleAssignment
+C) Add-AzUserRole
+D) Grant-AzAccess
+
+✅ Respuesta: B
+
+❓ 3 (escenario)
+
+Un usuario necesita acceso SOLO a una VM específica, no a todo el grupo.
+
+¿Qué haces?
+
+A) Asignar rol a la suscripción
+B) Asignar rol al Resource Group
+C) Asignar rol al recurso (VM)
+D) Crear nuevo tenant
+
+✅ Respuesta: C
+
+🟢 SECCIÓN 2: STORAGE
+❓ 4
+
+¿Qué tipo de replicación es MÁS económica?
+
+A) GRS
+B) RA-GRS
+C) LRS
+D) ZRS
+
+✅ Respuesta: C (LRS)
+
+❓ 5
+
+¿Qué servicio permite almacenar archivos tipo SMB?
+
+A) Blob
+B) File Storage
+C) Queue
+D) Table
+
+✅ Respuesta: B
+
+❓ 6
+
+Comando CLI para crear storage:
+
+A) az storage create
+B) az storage account create
+C) az account storage
+D) New-StorageAccount
+
+✅ Respuesta: B
+
+🔴 SECCIÓN 3: COMPUTE (MUY IMPORTANTE)
+❓ 7
+
+¿Qué comando crea una VM en PowerShell?
+
+A) Create-AzVM
+B) New-AzVM
+C) Add-AzVM
+D) Set-AzVM
+
+✅ Respuesta: B
+
+❓ 8 (escenario)
+
+Quieres reducir costos apagando una VM sin eliminarla.
+
+¿Qué haces?
+
+A) Delete
+B) Stop
+C) Deallocate
+D) Restart
+
+✅ Respuesta: C (deallocate)
+
+👉 Esto es MUY preguntado
+
+❓ 9
+
+¿Qué servicio es PaaS?
+
+A) VM
+B) App Service
+C) VNet
+D) Disk
+
+✅ Respuesta: B
+
+🟣 SECCIÓN 4: NETWORKING
+❓ 10
+
+¿Qué recurso controla tráfico entrante/saliente?
+
+A) VNet
+B) NSG
+C) DNS
+D) Route Table
+
+✅ Respuesta: B
+
+❓ 11
+
+¿Qué permite conectar redes on-premises con Azure?
+
+A) Load Balancer
+B) VPN Gateway
+C) NSG
+D) App Gateway
+
+✅ Respuesta: B
+
+❓ 12 (escenario)
+
+Tienes 2 VMs en la misma VNet pero no se comunican.
+
+¿Qué revisar?
+
+A) Storage
+B) NSG
+C) Subscription
+D) Azure AD
+
+✅ Respuesta: B
+
+🟠 SECCIÓN 5: MONITOREO
+❓ 13
+
+¿Qué servicio monitorea métricas?
+
+A) Azure Monitor
+B) Advisor
+C) Policy
+D) Defender
+
+✅ Respuesta: A
+
+❓ 14
+
+¿Qué permite alertas?
+
+A) Log Analytics
+B) Azure Monitor
+C) Backup
+D) Cost Management
+
+✅ Respuesta: B
+
+⚫ SECCIÓN 6: COMANDOS (CLAVE)
+❓ 15
+
+Login en CLI:
+
+A) az connect
+B) az login
+C) login-az
+D) Connect-AzAccount
+
+✅ Respuesta: B
+
+❓ 16
+
+Login en PowerShell:
+
+A) az login
+B) Connect-AzAccount
+C) Login-Az
+D) Set-AzLogin
+
+✅ Respuesta: B
+
+❓ 17
+
+Crear Resource Group CLI:
+
+A) az group create
+B) az resource group new
+C) New-AzGroup
+D) az create group
+
+✅ Respuesta: A
+
+🔥 SECCIÓN 7: ESCENARIOS (EXAMEN REAL)
+❓ 18
+
+Quieres evitar que se borre un recurso crítico.
+
+¿Qué usas?
+
+A) RBAC
+B) Lock
+C) NSG
+D) Policy
+
+✅ Respuesta: B
+
+❓ 19
+
+Quieres aplicar reglas obligatorias a recursos (ej. naming).
+
+¿Qué usas?
+
+A) RBAC
+B) Policy
+C) NSG
+D) Monitor
+
+✅ Respuesta: B
+
+❓ 20 (muy típica)
+
+¿Qué herramienta reduce costos con recomendaciones?
+
+A) Azure Monitor
+B) Azure Advisor
+C) NSG
+D) Log Analytics
+
+✅ Respuesta: B
+
+📊 RESULTADOS
+18–20 ✅ → Listo para examen
+15–17 ✅ → Buen nivel
+12–14 ⚠️ → Refuerza
+<12 ❌ → Necesitas práctica
+🚨 IMPORTANTE (REALIDAD 2026)
+
+✔ Este simulador es basado en el blueprint oficial
+✔ NO son preguntas filtradas (eso es ilegal y poco útil)
+✔ El examen real:
+
+Cambia preguntas constantemente
+Usa escenarios largos
+Evalúa decisiones, no memoria
+
+👉 Microsoft NO repite preguntas exactas, pero sí el patrón
+
+🎯 TRUCOS FINALES (LOS QUE APRUEBAN USAN ESTO)
+🔥 1. Técnica clave
+
+Si ves:
+
+Seguridad → RBAC o Policy
+Bloquear → Lock
+Costos → Advisor
+🧠 2. Eliminación rápida
+
+Descarta comandos falsos:
+
+Create-AzVM ❌
+az vm new ❌
+
+
