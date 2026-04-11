@@ -137,78 +137,149 @@ Para el AZ-104 necesitas:
 equivalencias (nivel examen AZ-104) organizadas por tema. Me enfoco en comandos que sí suelen aparecer en preguntas o escenarios prácticos.
 
 🔐 AUTENTICACIÓN Y CONTEXTO (10)
+Acción	Azure                         CLI	                                        PowerShell
+
+Iniciar sesión interactiva	        az login	                                  Connect-AzAccount
+
+Login con tenant	            az login --tenant ID	                            Connect-AzAccount -Tenant ID
+
+Ver cuenta actual	            az account show                                  	Get-AzContext
+
+Listar suscripciones	        az account list	                                  Get-AzSubscription
+
+Cambiar suscripción	          az account set --subscription ID	                Set-AzContext -SubscriptionId ID
+
+Obtener tenant	            az account show --query tenantId	                  (Get-AzContext).Tenant.Id
+
+Logout	                    az logout                                          	Disconnect-AzAccount
+
+Login con SPN	              az login --service-principal	                      Connect-AzAccount -ServicePrincipal
+
+Mostrar ubicaciones	        az account list-locations	                          Get-AzLocation
+
+Ver contexto detallado	    az account show	                                    Get-AzContext
+
+
+      📦 RESOURCE GROUPS (10)
+  Acción	Azure CLI	PowerShell
+Crear RG	                            az group create	                           New-AzResourceGroup
+
+Listar RG                            	az group list	                             Get-AzResourceGroup
+
+Ver RG específico	                    az group show	                             Get-AzResourceGroup -Name
+
+Eliminar RG	                          az group delete	                           Remove-AzResourceGroup
+
+Ver recursos en RG	                  az resource list --resource-group	         Get-AzResource -ResourceGroupName
+
+Ver ubicación RG	                    az group show --query location	           (Get-AzResourceGroup).Location
+
+Crear con tags	                      az group create --tags	                    New-AzResourceGroup -Tag
+
+Actualizar tags	                      az group update --set tags	                Set-AzResourceGroup -Tag
+
+Ver tags	                            az group show --query tags	                (Get-AzResourceGroup).Tags
+
+Exportar template                    	az group export	                            Export-AzResourceGroup
+
+
+
+    💻 MÁQUINAS VIRTUALES (10)
+    Acción	Azure CLI	PowerShell
+Crear VM	                            az vm create	                               New-AzVM
+
+Listar VMs	                          az vm list	                                 Get-AzVM
+
+Ver detalles                          VM	az vm show	                             Get-AzVM -Name
+
+Iniciar VM	                          az vm start	                                 Start-AzVM
+
+Detener VM	                          az vm stop                                   Stop-AzVM
+
+Reiniciar VM	                        az vm restart	                               Restart-AzVM
+
+Eliminar VM	                          az vm delete	                                Remove-AzVM
+
+Deallocate VM                        	az vm deallocate	                            Stop-AzVM -Force
+
+Cambiar tamaño VM	                    az vm resize	                                Update-AzVM
+
+Listar tamaños	                      az vm list-sizes	                            Get-AzVMSize
+
+
+          🌐 REDES (10)
 Acción	Azure CLI	PowerShell
-Iniciar sesión interactiva	az login	Connect-AzAccount
-Login con tenant	az login --tenant ID	Connect-AzAccount -Tenant ID
-Ver cuenta actual	az account show	Get-AzContext
-Listar suscripciones	az account list	Get-AzSubscription
-Cambiar suscripción	az account set --subscription ID	Set-AzContext -SubscriptionId ID
-Obtener tenant	az account show --query tenantId	(Get-AzContext).Tenant.Id
-Logout	az logout	Disconnect-AzAccount
-Login con SPN	az login --service-principal	Connect-AzAccount -ServicePrincipal
-Mostrar ubicaciones	az account list-locations	Get-AzLocation
-Ver contexto detallado	az account show	Get-AzContext
-📦 RESOURCE GROUPS (10)
-Acción	Azure CLI	PowerShell
-Crear RG	az group create	New-AzResourceGroup
-Listar RG	az group list	Get-AzResourceGroup
-Ver RG específico	az group show	Get-AzResourceGroup -Name
-Eliminar RG	az group delete	Remove-AzResourceGroup
-Ver recursos en RG	az resource list --resource-group	Get-AzResource -ResourceGroupName
-Ver ubicación RG	az group show --query location	(Get-AzResourceGroup).Location
-Crear con tags	az group create --tags	New-AzResourceGroup -Tag
-Actualizar tags	az group update --set tags	Set-AzResourceGroup -Tag
-Ver tags	az group show --query tags	(Get-AzResourceGroup).Tags
-Exportar template	az group export	Export-AzResourceGroup
-💻 MÁQUINAS VIRTUALES (10)
-Acción	Azure CLI	PowerShell
-Crear VM	az vm create	New-AzVM
-Listar VMs	az vm list	Get-AzVM
-Ver detalles VM	az vm show	Get-AzVM -Name
-Iniciar VM	az vm start	Start-AzVM
-Detener VM	az vm stop	Stop-AzVM
-Reiniciar VM	az vm restart	Restart-AzVM
-Eliminar VM	az vm delete	Remove-AzVM
-Deallocate VM	az vm deallocate	Stop-AzVM -Force
-Cambiar tamaño VM	az vm resize	Update-AzVM
-Listar tamaños	az vm list-sizes	Get-AzVMSize
-🌐 REDES (10)
-Acción	Azure CLI	PowerShell
-Crear VNet	az network vnet create	New-AzVirtualNetwork
-Listar VNets	az network vnet list	Get-AzVirtualNetwork
-Crear subnet	az network vnet subnet create	New-AzSubnet
-Listar subnets	az network vnet subnet list	Get-AzVirtualNetworkSubnetConfig
-Crear NIC	az network nic create	New-AzNetworkInterface
-Listar NICs	az network nic list	Get-AzNetworkInterface
-Crear IP pública	az network public-ip create	New-AzPublicIpAddress
-Crear NSG	az network nsg create	New-AzNetworkSecurityGroup
-Crear regla NSG	az network nsg rule create	New-AzNetworkSecurityRuleConfig
-Asociar NSG	az network nic update	Set-AzNetworkInterface
-💾 STORAGE (10)
-Acción	Azure CLI	PowerShell
-Crear storage	az storage account create	New-AzStorageAccount
-Listar storage	az storage account list	Get-AzStorageAccount
-Ver storage	az storage account show	Get-AzStorageAccount -Name
-Eliminar storage	az storage account delete	Remove-AzStorageAccount
-Crear container	az storage container create	New-AzStorageContainer
-Listar containers	az storage container list	Get-AzStorageContainer
-Subir blob	az storage blob upload	Set-AzStorageBlobContent
-Descargar blob	az storage blob download	Get-AzStorageBlobContent
-Listar blobs	az storage blob list	Get-AzStorageBlob
-Generar key	az storage account keys list	Get-AzStorageAccountKey
-👥 IDENTIDAD (AZURE AD / ENTRA ID) (10)
-Acción	Azure CLI	PowerShell
-Crear usuario	az ad user create	New-AzADUser
-Listar usuarios	az ad user list	Get-AzADUser
-Ver usuario	az ad user show	Get-AzADUser -UserPrincipalName
-Eliminar usuario	az ad user delete	Remove-AzADUser
-Crear grupo	az ad group create	New-AzADGroup
-Listar grupos	az ad group list	Get-AzADGroup
-Agregar miembro	az ad group member add	Add-AzADGroupMember
-Ver miembros	az ad group member list	Get-AzADGroupMember
-Crear SPN	az ad sp create-for-rbac	New-AzADServicePrincipal
-Listar SPN	az ad sp list	Get-AzADServicePrincipal
-🧠 CLAVES FINALES (esto te da puntos en el examen)
+Crear VNet	                          az network vnet create                        New-AzVirtualNetwork
+
+Listar VNets	                        az network vnet list	                        Get-AzVirtualNetwork
+
+Crear subnet	                        az network vnet subnet create	                New-AzSubnet
+
+Listar subnets	                      az network vnet subnet list	                  Get-AzVirtualNetworkSubnetConfig
+
+Crear NIC	                            az network nic create	                        New-AzNetworkInterface
+
+Listar NICs	                          az network nic list	                          Get-AzNetworkInterface
+
+Crear IP pública	                    az network public-ip create	                  New-AzPublicIpAddress
+
+Crear NSG	                            az network nsg create	                        New-AzNetworkSecurityGroup
+
+Crear regla NSG	                      az network nsg rule create	                  New-AzNetworkSecurityRuleConfig
+
+Asociar NSG	                           az network nic update	                      Set-AzNetworkInterface
+
+  
+                💾 STORAGE (10)
+      Acción	Azure CLI	PowerShell
+Crear storage	                        az storage account create	                    New-AzStorageAccount
+
+Listar storage	                      az storage account list	                      Get-AzStorageAccount
+
+Ver storage	                          az storage account show	                      Get-AzStorageAccount -Name
+
+Eliminar storage	                    az storage account delete	                    Remove-AzStorageAccount
+
+Crear container	                      az storage container create	                  New-AzStorageContainer
+
+Listar containers	                    az storage container list	                    Get-AzStorageContainer
+
+Subir blob	                          az storage blob upload	                      Set-AzStorageBlobContent
+
+Descargar blob	                      az storage blob download	                    Get-AzStorageBlobContent
+
+Listar blobs	                        az storage blob list	                        Get-AzStorageBlob
+
+Generar key	                          az storage account keys list	                Get-AzStorageAccountKey
+
+      
+
+          👥 IDENTIDAD (AZURE AD / ENTRA ID) (10)
+              Acción	Azure CLI	PowerShell
+Crear usuario	                        az ad user create	                            New-AzADUser
+
+Listar usuarios	                      az ad user list	                              Get-AzADUser
+
+Ver usuario	                          az ad user show	                              Get-AzADUser -UserPrincipalName
+
+Eliminar usuario	                    az ad user delete	                            Remove-AzADUser
+
+Crear grupo	                          az ad group create	                          New-AzADGroup
+
+Listar grupos	                        az ad group list	                            Get-AzADGroup
+
+Agregar miembro	                      az ad group member add	                      Add-AzADGroupMember
+
+Ver miembros	                        az ad group member list	                      Get-AzADGroupMember
+
+Crear SPN	                            az ad sp create-for-rbac	                    New-AzADServicePrincipal
+
+Listar SPN	                          az ad sp list	                                Get-AzADServicePrincipal
+
+
+
+
+          🧠 CLAVES FINALES (esto te da puntos en el examen)
 
 CLI = rápido, estilo Linux (az vm start)
 
