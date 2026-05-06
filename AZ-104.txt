@@ -1,10 +1,79 @@
 
+
 Win Server + PowerShelle 50 (Proyecto)
 AZ-104 Esp 14 
 AZ-104 Ingles 16 (Proyecto)
 Github Actions 10 (Proyecto)
 Intune 10
 DeVops Botero 16 (Proyecto con Docker)
+Terraform 10 (Certificado)
+Linux Server con Redes (Proyecto)  
+
+ 2  PROYECTOS QUE INCLUYAN TODO
+Simulación de escenarios reales (fallos, escalabilidad)
+API básica
+Web app simple
+CRUD sencillo
+Corra en la nube
+Sea accesible públicamente
+6. Seguridad básica (muy importante)
+Variables seguras (secrets)
+Acceso restringido
+Algo de monitoreo
+
+
+ Proyecto real (deploy completo en cloud)
+ Simulación de escenarios reales (fallos, escalabilidad)
+
+Entregables finales (lo que debes tener sí o sí)
+Proyecto 1:
+App dockerizada
+Deploy automático
+Público
+Proyecto 2:
+Infra con Terraform
+Red + seguridad
+CI/CD
+Arquitectura documentada
+📁 Tu GitHub debe verse así
+repo-proyecto-1
+repo-proyecto-2
+
+Cada uno con:
+
+README claro
+Diagrama
+Instrucciones
+Explicación técnica
+🎯 Señales de que ya eres empleable
+
+Puedes:
+
+Explicar tu arquitectura sin leer
+Hacer deploy sin tutorial
+Resolver errores básicos en Linux
+Explicar qué hace tu pipeline
+
+👉 Si cumples esto → empieza a aplicar.
+
+⚠️ Realidad importante
+
+Con 3h diarias:
+
+En 2 meses → nivel junior competitivo ✔
+En 3 meses → muy buen perfil ✔
+
+Pero SOLO si:
+👉 construyes proyectos reales (no cursos infinitos)
+
+💡 Consejo clave (esto cambia todo)
+
+Graba o documenta:
+
+Problemas que tuviste
+Cómo los resolviste
+
+👉 En entrevistas, eso vale más que cualquier certificado.
 
 
  (OMITIR)
