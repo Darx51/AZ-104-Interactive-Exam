@@ -1,0 +1,21 @@
+
+Win Server + PowerShelle 50 (Proyecto)
+AZ-104 Esp 14 
+AZ-104 Ingles 16 (Proyecto)
+Github Actions 10 (Proyecto)
+Intune 10
+DeVops Botero 16 (Proyecto con Docker)
+
+
+ (OMITIR)
+fortinet 20 - (Proyecto)
+vmware 20 - Proyecto
+HyperV 15
+
+
+AMA = AGENT MONITOR AZURE
+SAS = Shared Access Signature ( firma de acceso compartido )
+NVA = Appliance virtual Network
+RPO = Recovery Point Objective  (para respaldos)
+SLA = (Service Level Agreement
+MUA = Multi-User Authorization
