@@ -22,6 +22,23 @@ Rackspace	      Media–alta
 EPAM	            Alta
 
 
+Comando Linux	Para qué sirve	Qué hace	Equivalente en Windows
+systemctl	                  Administrar servicios	               Iniciar, detener, reiniciar y revisar servicios	services.msc
+top	                        Ver procesos en tiempo real	         Muestra CPU, RAM y procesos activos	Task Manager
+df -h	                        Revisar espacio en disco	            Muestra uso de discos y particiones	Disk Management / “This PC”
+journalctl	                  Ver logs del sistema	                  Muestra errores, eventos y registros	Event Viewer
+
+   Ejemplos rápidos
+Comando	                  Ejemplo	            Función
+systemctl	         systemctl status ssh	      Ver estado de SSH
+top	               top	                     Ver procesos activos
+df -h	               df -h	                     Ver espacio disponible
+journalctl	         journalctl -xe            	Ver errores recientes
+
+
+
+
+
 Win Server + PowerShelle 50 (Proyecto)
 AZ-104 Esp 14 
 AZ-104 Ingles 16 (Proyecto)
