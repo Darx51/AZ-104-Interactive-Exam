@@ -13,6 +13,13 @@ VIDEOS CON EXPLICACIONES
 3. Hago troubleshooting
 4. Documento cambios
 
+Empresa	         Dificultad
+Softtek	         Fácil–media
+DXC	            Media
+NTT DATA         	Media
+NEORIS	         Media
+Rackspace	      Media–alta
+EPAM	            Alta
 
 
 Win Server + PowerShelle 50 (Proyecto)
