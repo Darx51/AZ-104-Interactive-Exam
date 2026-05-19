@@ -7,6 +7,12 @@ LABOATORIOS
 VIDEOS CON EXPLICACIONES
    https://www.youtube.com/watch?v=61BUMPcQYRc&list=PLlKA5U_Yqgof3H0YWhzvarFixW9QLTr4S&index=3
 
+ PARA ENTREVISTAS
+1. Identifico el problema
+2. Reviso logs/conectividad
+3. Hago troubleshooting
+4. Documento cambios
+
 
 
 Win Server + PowerShelle 50 (Proyecto)
