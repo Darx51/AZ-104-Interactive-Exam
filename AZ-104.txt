@@ -22,6 +22,19 @@ Rackspace	      Media–alta
 EPAM	            Alta
 
 
+Ejemplos de puertos comunes
+Servicio	Puerto
+HTTP	80
+HTTPS	443
+SSH	22
+RDP	3389
+DNS	53
+
+TCP                     	UDP
+Más seguro/confiable      	Más rápido
+Verifica entrega	         No verifica
+Usa conexión	            Sin conexión
+
 Comando Linux	Para qué sirve	Qué hace	Equivalente en Windows
 systemctl	                  Administrar servicios	               Iniciar, detener, reiniciar y revisar servicios	services.msc
 top	                        Ver procesos en tiempo real	         Muestra CPU, RAM y procesos activos	Task Manager
